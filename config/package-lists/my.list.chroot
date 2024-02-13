@@ -1,1 +1,1 @@
-vim open-vm-tools task-xfce-desktop firefox-esr
+psmisc zstd net-tools curl wget pulseaudio avahi-utils avahi-discover vim open-vm-tools-desktop spice-vdagent task-xfce-desktop mousepad chromium 
