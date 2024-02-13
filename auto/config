@@ -3,4 +3,8 @@
 set -e
 
 lb config noauto \
+        --distribution bookworm \
+	--bootloaders "grub-pc,grub-efi" \
+	--apt-recommends false \
+	--chroot-squashfs-compression-type zstd \
 	"${@}"
