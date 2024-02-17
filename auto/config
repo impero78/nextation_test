@@ -6,5 +6,6 @@ lb config noauto \
         --distribution bookworm \
 	--bootloaders "grub-pc,grub-efi" \
 	--apt-recommends false \
+	--bootappend-live "boot=live noeject quiet splash" \
 	--chroot-squashfs-compression-type zstd \
 	"${@}"
