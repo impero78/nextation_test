@@ -1,1 +1,9 @@
-psmisc zstd xinput iio-sensor-proxy curl wget pulseaudio avahi-utils avahi-discover plymouth-themes vim open-vm-tools-desktop spice-vdagent task-xfce-desktop mousepad chromium openssh-server dos2unix snapd
+psmisc zstd xinput iio-sensor-proxy curl wget pulseaudio avahi-utils avahi-discover plymouth-themes vim open-vm-tools-desktop spice-vdagent task-xfce-desktop mousepad chromium openssh-server dos2unix ristretto tumbler
+
+#onboard
+#see https://forum.armbian.com/topic/9206-trouble-with-virtual-keyboard-no-at-spi-provider-found-on-the-system/
+at-spi2-core
+onboard
+gir1.2-atspi-2.0
+onboard-data
+mousetweaks
