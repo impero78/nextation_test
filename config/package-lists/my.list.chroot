@@ -7,3 +7,11 @@ onboard
 gir1.2-atspi-2.0
 onboard-data
 mousetweaks
+
+#firmware for intel and realtek (non-free repo)
+#intel-microcode
+firmware-realtek
+#firmware-intel-sound
+#intel-media-va-driver-non-free
+mesa-utils
+
