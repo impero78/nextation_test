@@ -1,4 +1,8 @@
-psmisc zstd xinput iio-sensor-proxy curl wget pulseaudio avahi-utils avahi-discover plymouth-themes vim open-vm-tools-desktop spice-vdagent task-xfce-desktop mousepad chromium openssh-server dos2unix ristretto tumbler
+psmisc zstd xinput iio-sensor-proxy curl wget pulseaudio avahi-utils avahi-discover plymouth-themes vim open-vm-tools-desktop spice-vdagent task-xfce-desktop mousepad openssh-server dos2unix ristretto tumbler
+
+#browsers
+chromium
+firefox-esr
 
 #onboard
 #see https://forum.armbian.com/topic/9206-trouble-with-virtual-keyboard-no-at-spi-provider-found-on-the-system/
@@ -7,10 +11,14 @@ onboard
 gir1.2-atspi-2.0
 onboard-data
 mousetweaks
+#dconf-editor: to see and edit onboard config variables
+dconf-editor 
+#libglib2.0-bin: to edit dconf variables via command line
+libglib2.0-bin
 
 #firmware for intel and realtek (non-free repo)
 #intel-microcode
-firmware-realtek
+#firmware-realtek
 #firmware-intel-sound
 #intel-media-va-driver-non-free
 mesa-utils
