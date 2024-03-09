@@ -1,5 +1,11 @@
 #!/bin/bash
 
+
+if [ -n "$SCREEN_ROTATION" ]; then
+    echo "Found SCREEN_ROTATION = $SCREEN_ROTATION"   
+    ./rotate-display.sh "$SCREEN_ROTATION"
+fi
+
 #SESSION_1_TYPE=chromium
 #SESSION_1_CHROMIUM_SERVER=http://google.com
 
