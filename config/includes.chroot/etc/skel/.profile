@@ -1,5 +1,5 @@
-xfconf-query --create --channel xfce4-session --property /general/StartAssistiveTechnologies --type bool --set true
-gsettings set org.gnome.desktop.a11y always-show-universal-access-status true 
+#xfconf-query --create --channel xfce4-session --property /general/StartAssistiveTechnologies --type bool --set true
+gsettings set org.gnome.desktop.interface toolkit-accessibility true 
 gsettings set org.onboard start-minimized true
 gsettings set org.onboard.auto-show enabled true
 gsettings set org.onboard.window docking-enabled true
