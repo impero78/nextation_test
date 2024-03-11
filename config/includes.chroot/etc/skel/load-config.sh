@@ -24,7 +24,7 @@ for ((i = 0; i <= 9; i++)); do
     	    session_options=${!session_options_varname}
 	    echo "Found $session_options_varname = $session_options"
 	    echo "Xterm params = $session_type $session_server $session_options"
-            xterm -e $session_type $session_server $session_options &
+            xterm -e $session_type $session_server "$session_options" &
 	fi
 
 
