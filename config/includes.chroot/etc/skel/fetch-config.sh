@@ -4,7 +4,7 @@
 NET_HOST="google.com"
 # NET_URL="http://$NET_HOST"
 # Configuration files server
-CONF_HOST=MAT-LEGIONPRO.local # Default: actiqClient
+CONF_HOST=10.0.2.2 # 10.0.2.2 is the default gateway (host sytem) in VirtualBox with NAT networking
 CONF_URL="http://$CONF_HOST:90/conf"
 
 
@@ -31,10 +31,10 @@ get_interface_IPs() {
     echo $_iface_ips
 }
 
-# Function to return MAC address of the interface connecting to internet
+# Function to return the CAPITALIZED MAC address of the interface connecting to internet
 get_mac() {
     _mac=$(ip addr show $1 | grep link/ether | awk '{print $2}') 
-    echo $_mac
+    echo ${_mac^^}
 }
 
 get_compact_mac() {
