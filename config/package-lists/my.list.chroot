@@ -11,8 +11,10 @@ onboard
 gir1.2-atspi-2.0
 onboard-data
 mousetweaks
+
 #dconf-editor: to see and edit onboard config variables
 dconf-editor 
+
 #libglib2.0-bin: to edit dconf variables via command line
 libglib2.0-bin
 
@@ -22,4 +24,8 @@ libglib2.0-bin
 #firmware-intel-sound
 #intel-media-va-driver-non-free
 mesa-utils
+
+#VNC server
+tigervnc-scraping-server
+tigervnc-tools
 

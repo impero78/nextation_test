@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Starting VNC server... "
+x0tigervncserver -rfbauth /etc/vncpasswd -display :0 -localhost no
 
 if [ -n "$SCREEN_ROTATION" ]; then
     echo "Found SCREEN_ROTATION = $SCREEN_ROTATION"   
