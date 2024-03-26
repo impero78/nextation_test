@@ -6,6 +6,6 @@ lb config noauto \
         --distribution bookworm \
 	--bootloaders "grub-efi" \
 	--apt-recommends false \
-	--bootappend-live "boot=live noeject quiet splash" \
+	--bootappend-live "boot=live noeject quiet splash hostname=nextation username=tsuser" \
 	--chroot-squashfs-compression-type zstd \
 	"${@}"
