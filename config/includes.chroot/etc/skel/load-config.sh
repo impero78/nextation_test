@@ -3,6 +3,14 @@
 echo "Starting VNC server... "
 x0tigervncserver -rfbauth /etc/vncpasswd -display :0 -localhost no
 
+if [ -n "$NET_TIME_SERVER" ]; then
+    echo "Found NET_TIME_SERVER = $NET_TIME_SERVER"
+    sudo mkdir -p /etc/systemd/timesyncd.conf.d
+    file_content="[Time]\nNTP=$NET_TIME_SERVER"
+    echo -e "$file_content" > /etc/systemd/timesyncd.conf.d/ntp.conf
+    sudo systemctl restart systemd-timesyncd
+fi
+
 if [ -n "$SCREEN_ROTATION" ]; then
     echo "Found SCREEN_ROTATION = $SCREEN_ROTATION"   
     ./rotate-display.sh "$SCREEN_ROTATION"
