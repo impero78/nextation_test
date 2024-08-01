@@ -7,7 +7,7 @@ if [ -n "$NET_TIME_SERVER" ]; then
     echo "Found NET_TIME_SERVER = $NET_TIME_SERVER"
     sudo mkdir -p /etc/systemd/timesyncd.conf.d
     file_content="[Time]\nNTP=$NET_TIME_SERVER"
-    echo -e "$file_content" > /etc/systemd/timesyncd.conf.d/ntp.conf
+    echo -e "$file_content" | sudo tee /etc/systemd/timesyncd.conf.d/ntp.conf > /dev/null
     sudo systemctl restart systemd-timesyncd
 fi
 
