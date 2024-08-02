@@ -3,6 +3,12 @@
 echo "Starting VNC server... "
 x0tigervncserver -rfbauth /etc/vncpasswd -display :0 -localhost no
 
+if [ -n "$TIME_ZONE" ]; then
+    echo "Found TIME_ZONE = $TIME_ZONE"
+    sudo rm /etc/localtime
+    sudo ln -s /usr/share/zoneinfo/$TIME_ZONE /etc/localtime
+fi
+
 if [ -n "$NET_TIME_SERVER" ]; then
     echo "Found NET_TIME_SERVER = $NET_TIME_SERVER"
     sudo mkdir -p /etc/systemd/timesyncd.conf.d
